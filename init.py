@@ -27,6 +27,7 @@ if LOCATION != "":
 	#GET MP3 FILE
 	from os import listdir
 	from os.path import isfile, join
+	mypath = "/home/AutoPlayUSB/mount/"
 	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 	print(onlyfiles)
 
