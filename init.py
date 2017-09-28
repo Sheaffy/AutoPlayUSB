@@ -10,4 +10,4 @@ for line in lines:
         path = "/sys/class/block/" + deviceName
         if os.path.islink(path):
             if os.path.realpath(path).find("/usb") > 0:
-                print "/dev/%s" % deviceName
+                print("/dev/" + deviceName)
