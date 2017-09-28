@@ -36,7 +36,8 @@ if LOCATION != "":
 	#MAKE NEW FILE
 	file = open('/home/AutoPlayUSB/mount/playlist.txt', 'w')
 	file.writelines(["%s\n" % item  for item in onlyfiles])
-
+	file.close()
+	
 	time.sleep(2)
 
 	os.system("cd /home/AutoPlayUSB/mount && mplayer -ao alsa:device=hw=1.0 -playlist playlist.txt -loop 0")
