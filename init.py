@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os, random
+import os, random, time
 
 partitionsFile = open("/proc/partitions")
 lines = partitionsFile.readlines()[2:]#Skips the header lines
@@ -37,7 +37,7 @@ if LOCATION != "":
 	file = open('/home/AutoPlayUSB/mount/playlist.txt', 'w')
 	file.writelines(["%s\n" % item  for item in onlyfiles])
 
-
+	time.sleep(2)
 
 	os.system("cd /home/AutoPlayUSB/mount && mplayer -ao alsa:device=hw=1.0 -playlist playlist.txt -loop 0")
 
