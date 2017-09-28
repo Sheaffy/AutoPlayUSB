@@ -16,6 +16,7 @@ for line in lines:
             	LOCATION = "/dev/"+deviceName
                 print("/dev/" + deviceName)
 
+os.system("umount "+LOCATION)
 os.system("mount "+LOCATION+" /home/autoplay/AutoPlayUSB/mount") 
 
 
