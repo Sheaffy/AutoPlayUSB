@@ -31,6 +31,12 @@ if LOCATION != "":
 	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 	print(onlyfiles)
 
+	#REMOVE FILE IF PRESENT
+	os.system("rm /home/AutoPlayUSB/playlist.txt")
+	#MAKE NEW FILE
+	file = open('playlist.txt', 'w')
+	file.writelines(["%s\n" % item  for item in onlyfiles])
+
 
 
 
