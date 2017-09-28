@@ -1,5 +1,6 @@
 #!/usr/bin/python
-import os
+import os, random
+
 partitionsFile = open("/proc/partitions")
 lines = partitionsFile.readlines()[2:]#Skips the header lines
 
@@ -19,9 +20,15 @@ for line in lines:
 
 if LOCATION != "":
 	os.system("sudo umount "+LOCATION)
-	os.system("sudo mount "+LOCATION+" /home/autoplay/AutoPlayUSB/mount") 
+	print("Unmounted")
+	os.system("sudo mount "+LOCATION+" /home/AutoPlayUSB/mount") 
+	print("Mounted")
 
-
+	#GET MP3 FILE
+	from os import listdir
+	from os.path import isfile, join
+	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+	print(onlyfiles)
 
 
 
