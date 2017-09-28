@@ -39,7 +39,7 @@ if LOCATION != "":
 
 
 
-	os.system("mplayer -ao alsa:device=hw=1.0 -playlist /home/AutoPlayUSB/mount/playlist.txt -loop 0")
+	os.system("cd /home/AutoPlayUSB/mount && mplayer -ao alsa:device=hw=1.0 -playlist playlist.txt -loop 0")
 
 
 
