@@ -1,6 +1,6 @@
 # AutoPlayUSB
 
-this is a python script that will automaticly mount any usb drives, find all mp3's on that drive and play them all on on a playlist that repeats.
+This is a python script that will automaticly mount any usb drives, find all mp3's on that drive and play them all on on a playlist that repeats.
 
 install Mplayer
 ```
