@@ -16,8 +16,11 @@ for line in lines:
             	LOCATION = "/dev/"+deviceName
                 print("/dev/" + deviceName)
 
-os.system("umount "+LOCATION)
-os.system("mount "+LOCATION+" /home/autoplay/AutoPlayUSB/mount") 
+if LOCATION != "":
+	os.system("sudo umount "+LOCATION)
+	os.system("sudo mount "+LOCATION+" /home/autoplay/AutoPlayUSB/mount") 
+
+
 
 
 
