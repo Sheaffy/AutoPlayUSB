@@ -15,6 +15,7 @@ for line in lines:
             if os.path.realpath(path).find("/usb") > 0:
             	LOCATION = "/dev/"+deviceName
                 print("/dev/" + deviceName)
+                print(minorNumber)
 
 if LOCATION != "":
 	os.system("sudo umount "+LOCATION)
