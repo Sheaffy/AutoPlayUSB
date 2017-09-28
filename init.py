@@ -39,6 +39,8 @@ if LOCATION != "":
 
 
 
+	os.system("mplayer -ao alsa:device=hw=1.0 -playlist /home/AutoPlayUSB/playlist.txt -loop 0")
+
 
 
 while True:
