@@ -32,14 +32,14 @@ if LOCATION != "":
 	print(onlyfiles)
 
 	#REMOVE FILE IF PRESENT
-	os.system("rm /home/AutoPlayUSB/playlist.txt")
+	os.system("rm /home/AutoPlayUSB/mount/playlist.txt")
 	#MAKE NEW FILE
-	file = open('playlist.txt', 'w')
+	file = open('/home/AutoPlayUSB/mount/playlist.txt', 'w')
 	file.writelines(["%s\n" % item  for item in onlyfiles])
 
 
 
-	os.system("mplayer -ao alsa:device=hw=1.0 -playlist /home/AutoPlayUSB/playlist.txt -loop 0")
+	os.system("mplayer -ao alsa:device=hw=1.0 -playlist /home/AutoPlayUSB/mount/playlist.txt -loop 0")
 
 
 
