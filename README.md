@@ -12,3 +12,13 @@ ALWAYS install in /home this is currently hardcoded
 ```
 sudo git clone https://github.com/Sheaffy/AutoPlayUSB.git
 ```
+
+###Automatic Startup
+```
+sudo nano /etc/rc.local
+```
+Put in rc.local
+```
+python /home/pi/Boat/init.py &
+exit 0
+```
