@@ -10,6 +10,7 @@ sudo apt-get mplayer
 ## Installation
 ALWAYS install in /home this is currently hardcoded
 ```
+cd /home
 sudo git clone https://github.com/Sheaffy/AutoPlayUSB.git
 ```
 
