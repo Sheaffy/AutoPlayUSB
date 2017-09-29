@@ -19,6 +19,6 @@ sudo nano /etc/rc.local
 ```
 Put in rc.local
 ```
-python /home/pi/Boat/init.py &
+sudo python /home/AutoPlayUSB/init.py &
 exit 0
 ```
