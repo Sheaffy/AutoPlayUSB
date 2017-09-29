@@ -7,6 +7,7 @@ from os.path import isfile, join
 #variable decliration
 LOCATION = ""
 
+dirname, filename = os.path.split(os.path.abspath(__file__))
 
 
 partitionsFile = open("/proc/partitions")
@@ -46,7 +47,8 @@ if LOCATION != "":
 	#Play auto files using mplayer with the created playlist.txt
 	time.sleep(2)
 	os.system("cd /home/AutoPlayUSB/mount && mplayer -ao alsa:device=hw=1.0 -playlist playlist.txt -loop 0")
-
+else:
+	Print("No Connected USB")
 
 #create loop to keep the script running forever
 while True:
